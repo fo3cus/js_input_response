@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 - Part A</title>
+    <script>
+        function greetFunction() {
+            var name;
+            while (true) {
+                name = prompt("Please enter your name", "Your name");
+                if (name === null) {
+                    return;
+                } else {
+                    break;
+                }
+            }
+            document.getElementById("hello").innerHTML = "Hello " + name + " ! How are you today?";
+        }
+
+        function numberFunction() {
+            var num;
+            while (true) {
+                num = prompt("Supply a random number in between 1 and 100", "Number");
+                if (num === null) {
+                    return;
+                } else if (num >= 1 && num <= 100) {
+                    break;
+                }
+            }
+
+            num = parseInt(num);
+            if (num < 50) {
+                alert("Hey, your number is less than 50");
+            } else {
+                alert("Yo, your number is greater than or equal to 50");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Click the button to demonstrate the prompt box.</p>
+
+    <button type="button" onclick="greetFunction()">
+        Click Here, Please
+    </button>
+
+    <p id="hello"></p>
+
+    <p><a href="#" onclick="numberFunction()">Click here</a></p>
+
+</body>
+
+</html>
